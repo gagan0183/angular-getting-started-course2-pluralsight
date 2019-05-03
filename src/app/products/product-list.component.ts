@@ -8,6 +8,7 @@ export class ProductListComponent {
   productListTitle: String = "Product List";
   imageWidth = 50;
   imageHeight = 2;
+  showImage: boolean = false;
   products: any[] = [
     {
       productId: 2,
@@ -32,4 +33,8 @@ export class ProductListComponent {
         "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
     }
   ];
+
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
 }
