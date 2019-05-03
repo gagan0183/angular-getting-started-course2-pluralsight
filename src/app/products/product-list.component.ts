@@ -9,6 +9,7 @@ export class ProductListComponent {
   imageWidth = 50;
   imageHeight = 2;
   showImage: boolean = false;
+  search: String = "search";
   products: any[] = [
     {
       productId: 2,
