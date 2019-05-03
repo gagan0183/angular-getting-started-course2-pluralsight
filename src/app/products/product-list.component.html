@@ -1,6 +1,6 @@
 <div class="card">
 	<div class="card-reader">
-		{{productListTitle}}
+		{{ productListTitle }}
 	</div>
 	<div class="card-body">
 		<div class="row">
@@ -14,7 +14,7 @@
 				<h4>Filtered by:</h4>
 			</div>
 		</div>
-		<div class="table-responsive">
+		<div class="table-responsive" *ngIf="products && products.length">
 			<table class="table">
 				<thead>
 					<tr>
@@ -31,8 +31,15 @@
 					</tr>
 				</thead>
 				<tbody>
+					<tr *ngFor="let product of products">
+						<td><img [src]="product.imageUrl" [title]="product.productName" [style.width.px]="imageWidth" [style.height.px]="imageHeight"></td>
+						<td>{{ product.productName }}</td>
+						<td>{{ product.productCode }}</td>
+						<td>{{ product.releaseDate }}</td>
+						<td>{{ product.price }}</td>
+						<td>{{ product.starRating }}</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
-</div>
