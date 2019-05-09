@@ -70,4 +70,8 @@ export class ProductListComponent implements OnInit {
         product.productName.toLocaleLowerCase().indexOf(value) !== -1
     );
   }
+
+  ratingClicked(message: string): void {
+    this.productListTitle = message;
+  }
 }
