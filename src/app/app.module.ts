@@ -9,6 +9,7 @@ import { ConvertToSpaces } from "./pipes/convert-to-spaces.pipe";
 import { StarComponent } from "./star/star.component";
 import { ProductService } from "./products/product.service";
 import { ProductDetailComponent } from "./products/product-detail.component";
+import { WelcomeComponent } from "./welcome/welcome.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductDetailComponent } from "./products/product-detail.component";
     ProductListComponent,
     ConvertToSpaces,
     StarComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    WelcomeComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [ProductService],
